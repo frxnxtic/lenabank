@@ -39,7 +39,11 @@ Route::group(['middleware' => ['user']], function(){
 
     Route::post("/account/transfer-funds/submit",[AccountController::class,'submitTransfer'])->name("account.transfer.submit");
 
+    Route::post("/account/deposit/submit",[AccountController::class,'validateDeposit'])->name("account.deposit.submit");
+
     Route::get("/account/withdraw",[AccountController::class,'withdraw'])->name("account.withdraw");
+
+    Route::get("/account/deposit", [AccountController::class,'deposit'])->name("account.deposit");
 
     Route::post("/account/withdraw/purchase",[AccountController::class,'purchasewithdraw'])->name("account.withdraw.purchase");
 

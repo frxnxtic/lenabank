@@ -50,8 +50,9 @@
             <tbody>
             <?php $counter = 1; ?>
             @foreach(Auth::user()->account->transactions as $transaction)
-                <tr class="@if($transaction->transaction_type == "Credit") success @else danger @endif">
+                <tr class="@if($transaction->transaction_type == "Credit" || $transaction->transaction_type == "Deposit") success @else danger @endif">
                     <td>{{ $counter }}</td>
+                    <td>{{ $transaction->id }}</td>
                     <td>{{ $transaction->transaction_type }}</td>
                     <td>&#8372;{{ number_format($transaction->transaction_amount) }}</td>
                     <td>{{ $transaction->transaction_description }}</td>

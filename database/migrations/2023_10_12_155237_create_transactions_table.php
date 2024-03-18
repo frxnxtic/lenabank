@@ -16,7 +16,7 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->string("account_id")->index();
-            $table->enum("transaction_type",["Debit","Credit"]);
+            $table->enum("transaction_type",["Debit","Credit","Deposit"]);
             $table->string("transaction_description");
             $table->decimal("transaction_amount",10,2);
             $table->foreign("account_id")->references("id")->on("accounts")->onDelete("cascade");

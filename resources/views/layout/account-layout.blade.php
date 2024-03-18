@@ -28,6 +28,9 @@
             <a class="nav-link" href="{{ route('account') }}">Account</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('account.deposit') }}">Deposit</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link disabled" href="{{ route('account.logout') }}">Logout</a>
         </li>
     </ul>

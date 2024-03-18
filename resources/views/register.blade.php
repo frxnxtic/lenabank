@@ -60,7 +60,7 @@
         </div>
         <input type="submit" class="btn btn-primary btn-block btn-lg" value="Submit">
     </form>
-    <div class="text-center small">Don't have an account? <a href="{{ route('home') }}">Login</a></div>
+    <div class="text-center small">Already have an account? <a href="{{ route('home') }}">Login</a></div>
 </div>
 </body>
 </html>
